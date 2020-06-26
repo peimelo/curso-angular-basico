@@ -3,31 +3,40 @@
 <ul class="list-group mb-3">
   <li
     class="list-group-item d-flex justify-content-between align-items-center"
+    [class.active]="hero === selectedHero"
     *ngFor="let hero of heroes"
+    (click)="onSelect(hero)"
   >
     {{ hero.name }}
     <span class="badge badge-primary badge-pill">{{ hero.id }}</span>
   </li>
 </ul>
 
-<h2>{{ hero.name | uppercase }} Detail</h2>
+<div *ngIf="selectedHero">
+  <h2>{{ selectedHero.name | uppercase }} Detail</h2>
 
-<div class="card">
-  <div class="card-body">
-    <div class="form-group">
-      <label>ID</label>
-      <input type="text" class="form-control" readonly value="{{ hero.id }}" />
-    </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group">
+        <label>ID</label>
+        <input
+          type="text"
+          class="form-control"
+          readonly
+          value="{{ selectedHero.id }}"
+        />
+      </div>
 
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input
-        type="text"
-        class="form-control"
-        id="name"
-        placeholder="name"
-        [(ngModel)]="hero.name"
-      />
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="name"
+          [(ngModel)]="selectedHero.name"
+        />
+      </div>
     </div>
   </div>
 </div>
