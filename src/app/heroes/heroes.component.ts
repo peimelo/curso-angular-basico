@@ -19,4 +19,12 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
   }
+
+  onAdd(name: string) {
+    this.heroService.addHero({ name } as Hero).subscribe((hero) => {
+      if (hero) {
+        this.heroes.push(hero);
+      }
+    });
+  }
 }

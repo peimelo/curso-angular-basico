@@ -7,6 +7,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroAddComponent } from './hero-add/hero-add.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -21,6 +22,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MessagesComponent,
     NavbarComponent,
     DashboardComponent,
+    HeroAddComponent,
   ],
   imports: [
     BrowserModule,
