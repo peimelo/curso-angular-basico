@@ -7,14 +7,21 @@
 </div>
 
 <ul class="list-group mb-3">
-  <li
-    class="list-group-item d-flex justify-content-between align-items-center"
-    *ngFor="let hero of heroes"
-  >
-    <a routerLink="/heroes/{{ hero.id }}">
-      {{ hero.name }}
-    </a>
+  <li class="list-group-item" *ngFor="let hero of heroes">
+    <div class="d-flex">
+      <div class="p-2">
+        <span class="badge badge-primary badge-pill">{{ hero.id }}</span>
+      </div>
 
-    <span class="badge badge-primary badge-pill">{{ hero.id }}</span>
+      <div class="p-2">
+        <a routerLink="/heroes/{{ hero.id }}">
+          {{ hero.name }}
+        </a>
+      </div>
+
+      <div class="p-2 ml-auto">
+        <button class="btn btn-danger" (click)="delete(hero)">x</button>
+      </div>
+    </div>
   </li>
 </ul>

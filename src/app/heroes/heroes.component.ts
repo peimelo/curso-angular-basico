@@ -27,4 +27,12 @@ export class HeroesComponent implements OnInit {
       }
     });
   }
+
+  delete(hero: Hero) {
+    this.heroService.deleteHero(hero).subscribe((response) => {
+      if (typeof response !== 'undefined') {
+        this.heroes = this.heroes.filter((heroItem) => heroItem !== hero);
+      }
+    });
+  }
 }
