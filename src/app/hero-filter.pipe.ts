@@ -5,7 +5,7 @@ import { Hero } from './hero.model';
   name: 'heroFilter',
 })
 export class HeroFilterPipe implements PipeTransform {
-  transform(heroes: Hero[], filter: string): unknown {
+  transform(heroes: Hero[], filter: string): Hero[] {
     const nameFilter = filter.trim().toLowerCase();
 
     if (!nameFilter) {
