@@ -9,10 +9,12 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroAddComponent } from './hero-add/hero-add.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroFilterPipe } from './hero-filter.pipe';
 import { HeroesComponent } from './heroes/heroes.component';
 import { InMemoryDataService } from './in-memory-data.service';
 import { MessagesComponent } from './messages/messages.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SearchInputComponent } from './search-input/search-input.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent,
     DashboardComponent,
     HeroAddComponent,
+    HeroFilterPipe,
+    SearchInputComponent,
   ],
   imports: [
     BrowserModule,

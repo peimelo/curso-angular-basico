@@ -1,0 +1,20 @@
+<div class="form-group form-inline">
+  <label for="searchInput">{{ label }}</label>
+
+  <input
+    type="text"
+    class="form-control ml-3"
+    id="searchInput"
+    #searchBox
+    (input)="onSearch(searchBox.value)"
+  />
+
+  <button
+    class="btn btn-secondary"
+    type="button"
+    [disabled]="!searchBox.value.trim()"
+    (click)="searchBox.value = ''; onSearch('')"
+  >
+    Clear
+  </button>
+</div>
