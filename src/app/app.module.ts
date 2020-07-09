@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroAddComponent } from './hero-add/hero-add.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroFilterPipe } from './hero-filter.pipe';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { InMemoryDataService } from './in-memory-data.service';
 import { MessagesComponent } from './messages/messages.component';
@@ -27,6 +28,7 @@ import { SearchInputComponent } from './search-input/search-input.component';
     HeroAddComponent,
     HeroFilterPipe,
     SearchInputComponent,
+    HeroSearchComponent,
   ],
   imports: [
     BrowserModule,
