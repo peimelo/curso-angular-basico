@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/curso-angular-basico/"
+    "ghpages": "ng deploy --base-href=/curso-angular-basico/",
+    "ghpages:docs": "ng build --prod --output-path docs --base-href /curso-angular-basico/"
   },
   "private": true,
   "dependencies": {
