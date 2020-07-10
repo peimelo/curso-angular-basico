@@ -13,7 +13,10 @@ export class HeroService {
   private heroesUrl = `${environment.baseUrl}/heroes`;
 
   private httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: localStorage.getItem('token'),
+    }),
   };
 
   constructor(
@@ -22,7 +25,7 @@ export class HeroService {
   ) {}
 
   getHeroes(): Observable<Hero[]> {
-    return this.http.get<Hero[]>(this.heroesUrl).pipe(
+    return this.http.get<Hero[]>(this.heroesUrl, this.httpOptions).pipe(
       tap(() => this.log('fetched heroes')),
       catchError(this.handleError<Hero[]>('getHeroes', []))
     );
@@ -31,7 +34,7 @@ export class HeroService {
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
 
-    return this.http.get<Hero>(url).pipe(
+    return this.http.get<Hero>(url, this.httpOptions).pipe(
       tap(() => this.log(`fetched hero id=${id}`)),
       catchError(this.handleError<Hero>('getHeroes'))
     );

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -36,9 +37,11 @@ import { SearchInputComponent } from './search-input/search-input.component';
     AppRoutingModule,
     NgbCollapseModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-      delay: 500,
-    }),
+    environment.production
+      ? []
+      : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+          delay: 500,
+        }),
   ],
   providers: [],
   bootstrap: [AppComponent],
