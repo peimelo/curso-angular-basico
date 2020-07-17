@@ -1,4 +1,4 @@
-<div *ngIf="messageService.messages.length">
+<div *ngIf="messageService.getMessages().length">
   <h2>Messages</h2>
 
   <button
@@ -9,9 +9,9 @@
     Clear
   </button>
 
-  <div *ngFor="let message of messageService.messages">
-    <div class="alert alert-success" role="alert">
-      {{ message }}
-    </div>
+  <div *ngFor="let alert of messageService.getMessages()">
+    <ngb-alert [type]="alert.type" (close)="close(alert)">
+      {{ alert.message }}
+    </ngb-alert>
   </div>
 </div>

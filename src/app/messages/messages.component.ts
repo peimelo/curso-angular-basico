@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Alert } from '../alert.model';
 import { MessageService } from '../message.service';
 
 @Component({
@@ -8,4 +9,8 @@ import { MessageService } from '../message.service';
 })
 export class MessagesComponent {
   constructor(public messageService: MessageService) {}
+
+  close(alert: Alert) {
+    this.messageService.close(alert);
+  }
 }

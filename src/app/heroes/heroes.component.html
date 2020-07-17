@@ -6,7 +6,10 @@
   </div>
 
   <div class="col-12 col-sm-6">
-    <app-search-input (search)="onFilter($event)"></app-search-input>
+    <app-search-input
+      [label]="'Filter'"
+      (search)="onFilter($event)"
+    ></app-search-input>
   </div>
 </div>
 
