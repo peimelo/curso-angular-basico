@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ghpages": "ng deploy --base-href=/curso-angular-basico/",
-    "ghpages:docs": "ng build --prod --output-path docs --base-href /curso-angular-basico/"
+    "ghpages:docs": "ng build --prod --output-path docs --base-href /curso-angular-basico/",
+    "compodoc": "compodoc -p tsconfig.json"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "@angular-devkit/build-angular": "~0.901.9",
     "@angular/cli": "~9.1.9",
     "@angular/compiler-cli": "~9.1.11",
+    "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",

@@ -1,4 +1,19 @@
-# CursoAngularBasico
+# Curso Angular Básico
+
+This course was inspired by the [Tour of Heroes tutorial](https://angular.io/tutorial) on Angular's official website .
+
+## Usage
+
+```
+git clone https://github.com/peimelo/curso-angular-basico.git
+cd curso-angular-basico
+npm install
+ng serve
+```
+
+Open `http://localhost:4200`
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 
