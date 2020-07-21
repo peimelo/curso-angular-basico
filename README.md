@@ -13,6 +13,10 @@ ng serve
 
 Open `http://localhost:4200`
 
+## Diagrama dos itens criados no projeto
+
+![](./src/assets/diagrama.png)
+
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
