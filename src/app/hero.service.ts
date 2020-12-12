@@ -82,7 +82,12 @@ export class HeroService {
     }
 
     return this.http
-      .get<Hero[]>(`${this.heroesUrl}/?name=${term}`, this.httpOptions)
+      .get<Hero[]>(this.heroesUrl, {
+        ...this.httpOptions,
+        params: {
+          term,
+        },
+      })
       .pipe(
         tap((heroes) => {
           heroes && heroes.length
