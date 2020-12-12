@@ -75,7 +75,7 @@ export class HeroService {
     );
   }
 
-  // GET /heroes/?name=term
+  // GET /heroes/?term=xxx
   searchHeroes(term: string): Observable<Hero[]> {
     if (!(term && term.trim())) {
       return of([]);
