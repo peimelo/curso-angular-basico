@@ -85,7 +85,7 @@ export class HeroService {
       .get<Hero[]>(this.heroesUrl, {
         ...this.httpOptions,
         params: {
-          term,
+          name: term,
         },
       })
       .pipe(
